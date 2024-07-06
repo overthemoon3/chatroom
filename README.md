@@ -8,8 +8,14 @@ Notes:
 - select() function for the server and client because they need to both continuously listen and send
 
 ## Client Functions
+- initialize a listener socket that listens on port 6666
+- accept a new connection from the initialized socket
+- 
 
 ## Server Functions
+- initialize a listener socket that listens on port 6666
+- accept a new connection from the initialized socket
+- 
 
 # Milestones:
 
