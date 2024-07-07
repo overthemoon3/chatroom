@@ -3,19 +3,15 @@
 Notes: 
 
 - use Python, on Linux
-    - Specifically because Python has a socket library that allows us to have each host listen and send without ending the connection.
+    - Specifically because Python has a socket library (select) that allows us to have each host listen and send without ending the connection.
 - GitHub repo:
 - select() function for the server and client because they need to both continuously listen and send
 
 ## Client Functions
-- initialize a listener socket that listens on port 6666
-- accept a new connection from the initialized socket
-- 
+- elaborated in client.py
 
 ## Server Functions
-- initialize a listener socket that listens on port 6666
-- accept a new connection from the initialized socket
-- 
+- elaborated in server.py
 
 # Milestones:
 
@@ -41,8 +37,16 @@ Notes:
 - [ ]  and be able to send information to multiple hosts (should already be taken care of)
 - [ ]  [OPTIONAL]: MAKE IT MULTITHREADED?
 
+## beyond: create some kind of logout functionality 
+
 ## Sources:
 
 https://www.datacamp.com/tutorial/a-complete-guide-to-socket-programming-in-python
 
 https://docs.python.org/3/howto/sockets.html#socket-programming-howto
+
+https://docs.python.org/3/library/socket.html#socket.socket
+
+https://docs.python.org/3/library/selectors.html#module-selectors
+
+https://docs.python.org/3/library/io.html#io.IOBase.fileno
