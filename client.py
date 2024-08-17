@@ -7,12 +7,7 @@ import select
 import selectors
 import io
 
-def send_messages(client):
-    while True:
-        # send message 
-        msg = input("Message: ")
-        if msg != "":
-            client.send(msg.encode("utf-8")[:1024])
+user = input("Welcome to Sakshi's chatroom application! \nPlease start by choosing a username for yourself.\nThis will be used to display who you are to other pepole.\nOnce you enter your username, start chating!\nUser: ")
 
 def receive_messages(client):
     while True:    
@@ -20,7 +15,7 @@ def receive_messages(client):
         response = client.recv(1024)
         response = response.decode("utf-8")
         if response != "":
-            print("recieved", response, "from server")
+            print(response)
 
         # not really gonna program anything for when the
         # server needs to close.
@@ -30,6 +25,14 @@ def receive_messages(client):
     # closing client socket (I know the code will never reach here)
     # client.close()
     # print("Connection to the server closed")
+
+def send_messages(client):
+    while True:
+        # send message 
+        msg = input()
+        if msg != "":
+            msg = user + ": " + msg 
+            client.send(msg.encode("utf-8")[:1024])
 
 
 
@@ -58,5 +61,6 @@ def run_client():
     # wait for both to finish (won't happen)
     send_thread.join()
     receive_thread.join()
+
 
 run_client()
