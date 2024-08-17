@@ -2,7 +2,7 @@
 
 Notes: 
 
-- use Python, on Linux
+- use Python
     - Specifically because Python has a socket library (select) that allows us to have each host listen and send without ending the connection.
 - GitHub repo:
 - select() function for the server and client because they need to both continuously listen and send
