@@ -2,7 +2,7 @@
 
 Notes: 
 
-- use Python, on Linux
+- use Python
     - Specifically because Python has a socket library (select) that allows us to have each host listen and send without ending the connection.
 - GitHub repo:
 - select() function for the server and client because they need to both continuously listen and send
@@ -19,23 +19,23 @@ Notes:
 
 ### Goal 1: the client sends a message to the server
 
-- [ ]  Let the server accept and listen to connections from the client
-- [ ]  Let the client send a connection request to the server
-    - [ ]  huh how do we do that? do we need IP related stuff if it’s just on my laptop
-- [ ]  Once the connection is established, let the client send a message to the server
-- [ ]  Display the message on the server side
+- [DONE]  Let the server accept and listen to connections from the client
+- [DONE]  Let the client send a connection request to the server
+    - [NO, NOT NEEDED]  huh how do we do that? do we need IP related stuff if it’s just on my laptop
+- [DONE]  Once the connection is established, let the client send a message to the server
+- [DONE]  Display the message on the server side
 
 ### Goal 2: the client is able to display a message from the server
 
-- [ ]  send connection requests to new ports on the client side??????
-- [ ]  let the server send the received message as a broadcast (through all connected ports *including* the port from which the message was sent)
-- [ ]  let the client accept that message and display it on their terminal
+- [DONE]  send connection requests to new ports on the client side??????
+- [DONE]  let the server send the received message as a broadcast (through all connected ports *including* the port from which the message was sent)
+- [DONE]  let the client accept that message and display it on their terminal
 
 ## let it work on multiple clients
 
-- [ ]  let the server accept connections from multiple hosts
-- [ ]  and be able to send information to multiple hosts (should already be taken care of)
-- [ ]  [OPTIONAL]: MAKE IT MULTITHREADED?
+- [DONE]  let the server accept connections from multiple hosts
+- [DONE]  and be able to send information to multiple hosts (should already be taken care of)
+- [DONE]  [OPTIONAL]: MAKE IT MULTITHREADED?
 
 ## beyond: create some kind of logout functionality 
 
@@ -50,3 +50,8 @@ https://docs.python.org/3/library/socket.html#socket.socket
 https://docs.python.org/3/library/selectors.html#module-selectors
 
 https://docs.python.org/3/library/io.html#io.IOBase.fileno
+
+https://docs.python.org/3/library/threading.html
+
+https://www.geeksforgeeks.org/socket-programming-multi-threading-python/
+
