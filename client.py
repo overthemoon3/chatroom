@@ -44,8 +44,10 @@ def run_client():
     #                           type            type 
               
     # will reach out to the server first 
+    #server_ip = "chatroom.subnet08171600.vcn08171600.oraclevcn.com"
+    #server_ip = "64.181.244.176"
     server_ip = "127.0.0.1" # localhost, change when deployed 
-    server_open_port = 6969
+    server_open_port = 6169
 
     # establish connection
     client.connect((server_ip, server_open_port))

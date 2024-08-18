@@ -26,12 +26,18 @@ def read(connection, mask):
         if i != connection:
             i.send(response.encode("utf-8")[:1024])
 
+# server_ip = "chatroom.subnet08171600.vcn08171600.oraclevcn.com"
+# server_ip = "64.181.244.176"
+# server_ip = "0.0.0.0"
 server_ip = "127.0.0.1" # localhost, change when deployed 
-server_open_port = 6969
+server_open_port = 6169
 
 # create the server socket object 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print("Attempting to bind to", server_ip, "on port", server_open_port)
 server.bind((server_ip, server_open_port)) # server_ip, port 
+print("Successfully bound to", server_ip, "on port", server_open_port)
+
 server.listen(100)  # tells you how many clients can be put into the queue
                     # before the accept method is called on them
 print("Listening on", str(server_ip), "on port", str(server_open_port))
